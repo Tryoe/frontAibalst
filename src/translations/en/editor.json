@@ -1,0 +1,17 @@
+{
+    "panels": {
+        "panelsList": {
+            "templates": "岩石种类",
+            "customize": "岩石强度",
+            "elements": "岩石结构",
+            "images": "岩石结构面",
+            "videos": "隧道地应力",
+            "uploads": "岩石可爆性",
+            "text": "现场工况与参数设计",
+            "graphics": "起爆网络与预测",
+            "pixabay": "爆破成本计算",
+            "layers": "爆破方案导出",
+            "feedback": "爆破方案优化"
+        }
+    }
+}
