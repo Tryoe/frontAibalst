@@ -1,6 +1,14 @@
-## Index
+## Page1:RockSpecies
+
+![1740716382577](image/README/1740716382577.png)
+
+## Pege2:RockStrength
 
 ![1740647663602](image/README/1740647663602.png)
+
+## Page10:FeedBack
+
+![1740716477445](image/README/1740716477445.png)
 
 ## How to start
 

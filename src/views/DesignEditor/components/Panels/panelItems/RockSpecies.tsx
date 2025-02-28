@@ -138,48 +138,22 @@ export default function () {
           alignItems: "center",
           fontWeight: 500,
           justifyContent: "space-between",
-          padding: "1.4rem 1.5rem",
-
+          padding: "1.5rem",
         }}
       >
-        <Block $style={{
-          fontSize: "18px",
-          color: "#1a1a1a",
-          borderBottom: "2px solid rgb(41, 49, 55)",
-          paddingBottom: "7px",
-          marginBottom: "0px",
-          display: "flex",
-          alignItems: "center",
-          gap: "8px"
-        }}>
-          <span style={{
-            background: "rgb(41, 49, 55)",
-            color: "white",
-            width: "24px",
-            height: "24px",
-            borderRadius: "50%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "14px",
-          }}>1</span>
-          <span style={{
-            fontSize: "20px",
-            fontWeight: "bold",
-          }}>岩石种类</span>
-        </Block>
+        <Block className="font-bold ... underline underline-offset-4">1 岩石种类</Block>
         <Block onClick={() => setIsSidebarOpen(false)} $style={{ cursor: "pointer", display: "flex" }}>
           <AngleDoubleLeft size={18} />
         </Block>
       </Block>
       <Scrollable>
-        <div style={{ padding: "0.05rem 1.5rem"}}>
+        <div style={{ padding: "0 1.5rem" }}>
           <Block
             $style={{
               display: "flex",
               flexDirection: "column",
               gap: "1rem",
-              marginBottom: "0rem",
+              marginBottom: "1rem",
             }}
           >
             <Select
@@ -191,36 +165,22 @@ export default function () {
               overrides={{
                 ControlContainer: {
                   style: {
-                    backgroundColor: "#ffffff",
+                    backgroundColor: "#f8f8fb",
                     borderRadius: "8px",
-                    border: "1px solid #e0e4e9",
-                    transition: "all 0.3s ease",
-                    ':hover': {
-                      transform: "scale(1.02)",
-                      boxShadow: "0 4px 12px rgba(33, 150, 243, 0.15)",
-                      borderColor: "#2196f3",
-                    }
                   },
-                },
-                Placeholder: {
-                  style: {
-                    color: "#666",
-                    fontSize: "14px"
-                  }
                 },
                 DropdownListItem: {
                   style: {
-                    fontSize: "14px",
-                    transition: "all 0.01s ease",
                     ':hover': {
-                      backgroundColor: '#e3f2fd',
-                      color: '#2196f3'
+                      backgroundColor: '#1976d2'
                     }
                   }
                 },
-                ValueContainer: {
+                OptionContent: {
                   style: {
-                    padding: "12px 16px"
+                    ':hover': {
+                      color: '#ffffff'
+                    }
                   }
                 }
               }}
@@ -234,38 +194,25 @@ export default function () {
               overrides={{
                 ControlContainer: {
                   style: {
-                    backgroundColor: "#ffffff",
+                    backgroundColor: "#f8f8fb",
                     borderRadius: "8px",
-                    border: "1px solid #e0e4e9",
-                    transition: "all 0.3s ease",
-                    ':hover': {
-                      transform: "scale(1.02)",
-                      boxShadow: "0 4px 12px rgba(33, 150, 243, 0.15)",
-                      borderColor: "#2196f3",
-                    }
                   },
-                },
-                Placeholder: {
-                  style: {
-                    color: "#666",
-                    fontSize: "14px"
-                  }
                 },
                 DropdownListItem: {
                   style: {
-                    fontSize: "14px",
-                    transition: "all 0.2s ease",
                     ':hover': {
-                      backgroundColor: '#e3f2fd',
-                      color: '#2196f3'
+                      backgroundColor: '#1976d2'
                     }
                   }
                 },
-                ValueContainer: {
+                OptionContent: {
                   style: {
-                    padding: "12px 16px"
+                    ':hover': {
+                      color: '#ffffff'
+                    }
                   }
-                }
+                },
+              
               }}
             />
             <Select
@@ -277,36 +224,22 @@ export default function () {
               overrides={{
                 ControlContainer: {
                   style: {
-                    backgroundColor: "#ffffff",
+                    backgroundColor: "#f8f8fb",
                     borderRadius: "8px",
-                    border: "1px solid #e0e4e9",
-                    transition: "all 0.3s ease",
-                    ':hover': {
-                      transform: "scale(1.02)",
-                      boxShadow: "0 4px 12px rgba(33, 150, 243, 0.15)",
-                      borderColor: "#2196f3",
-                    }
                   },
-                },
-                Placeholder: {
-                  style: {
-                    color: "#666",
-                    fontSize: "14px"
-                  }
                 },
                 DropdownListItem: {
                   style: {
-                    fontSize: "14px",
-                    transition: "all 0.2s ease",
                     ':hover': {
-                      backgroundColor: '#e3f2fd',
-                      color: '#2196f3'
+                      backgroundColor: '#1976d2'
                     }
                   }
                 },
-                ValueContainer: {
+                OptionContent: {
                   style: {
-                    padding: "12px 16px"
+                    ':hover': {
+                      color: '#ffffff'
+                    }
                   }
                 }
               }}
@@ -315,33 +248,11 @@ export default function () {
             {/* 结果显示区域 */}
             <Block
               $style={{
-                marginTop: "0rem",
+                marginTop: "1rem",
                 borderRadius: "8px",
                 minHeight: "60px",
               }}
             >
-              {/* 图片上传区域标题 */}
-              <Block $style={{ 
-                fontWeight: "bold",
-                fontSize: "16px", 
-                color: "#1a1a1a", 
-                marginBottom: "0.5rem",
-                marginTop: "0rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "8px"
-              }}>
-                <span style={{
-                  width: "6px",
-                  height: "16px",
-                  backgroundColor: "rgb(41, 49, 55)",
-                  borderRadius: "3px",
-                  display: "inline-block"
-                }}></span>
-                图片上传区域：
-              </Block>
-
-              {/* 文件输入框 */}
               <input
                 type="file"
                 ref={inputFileRef}
@@ -349,8 +260,10 @@ export default function () {
                 onChange={handleFileUpload}
                 accept="image/*"
               />
-
-              {/* 上传区域 */}
+              {/* 添加预览图标签 */}
+              {uploadedImage && (
+                <Block $style={{ fontSize: "16px", color: "black", marginBottom: "0.5rem", textAlign: "left" }}>预览图：</Block>
+              )}
               <Block
                 onClick={handleUploadClick}
                 $style={{
@@ -364,49 +277,17 @@ export default function () {
                   justifyContent: "center",
                   cursor: "pointer",
                   backgroundColor: "#f8f8fb",
-                  overflow: "hidden",
-                  transition: "all 0.3s ease",
-                  ":hover": {
-                    border: "1px dashed #2196f3",
-                    backgroundColor: "#f0f7ff",
-                    transform: "translateY(-2px)",
-                    boxShadow: "0 2px 8px rgba(33, 150, 243, 0.15)"
-                  }
+                  overflow: "hidden"
                 }}
               >
                 {!uploadedImage ? (
                   <>
-                    <Block $style={{ 
-                      fontSize: "36px",
-                      color: "#666",
-                      transition: "color 0.3s ease",
-                      ":hover": {
-                        color: "#2196f3"
-                      }
-                    }}>+</Block>
-                    <Block $style={{ 
-                      marginBottom: "1rem",
-                      color: "#666",
-                      transition: "color 0.3s ease",
-                      ":hover": {
-                        color: "#2196f3"
-                      }
-                    }}>{uploadStatus}</Block>
+                    <Block $style={{ fontSize: "36px" }}>+</Block>
+                    <Block $style={{ marginBottom:"1rem"}}>{uploadStatus}</Block>
                   </>
                 ) : (
                   <>
-                    <Block $style={{ 
-                      width: "100%", 
-                      height: "180px", 
-                      display: "flex", 
-                      justifyContent: "center", 
-                      alignItems: "center",  
-                      backgroundColor: "#ffffff",
-                      transition: "transform 0.3s ease",
-                      ":hover": {
-                        transform: "scale(1.02)"
-                      }
-                    }}>
+                    <Block $style={{ width: "100%", height: "180px", display: "flex", justifyContent: "center", alignItems: "center",  backgroundColor: "#ffffff" }}>
                       <img 
                         src={uploadedImage as string} 
                         alt="预览图片"
@@ -421,47 +302,9 @@ export default function () {
                 )}
               </Block>
 
-              <Block $style={{ 
-                fontWeight: "bold",
-                fontSize: "16px", 
-                color: "#1a1a1a", 
-                marginBottom: "0.5rem",
-                marginTop: "1.5rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "8px"
-              }}>
-                <span style={{
-                  width: "6px",
-                  height: "16px",
-                  backgroundColor: "rgb(41, 49, 55)",
-                  borderRadius: "3px",
-                  display: "inline-block"
-                }}></span>
-                结果：
-              </Block>
-              <Block $style={{ 
-                color: selectedValue ? "#2196f3" : "#666",
-                border: "1px solid #e0e4e9",
-                width: "431px",
-                height: "48px",
-                fontSize: "15px",
-                backgroundColor: "white",
-                borderRadius: "8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                transition: "all 0.3s ease",
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
-                ':hover': {
-                  borderColor: "#2196f3",
-                  boxShadow: "0 4px 12px rgba(33, 150, 243, 0.15)"
-                }
-              }}>    
-                {selectedValue && typeof selectedValue === 'object' && selectedValue !== null && 'label' in selectedValue 
-                  ? (selectedValue as { label: string }).label 
-                  : <span style={{ color: "#999" }}>未选择</span>
-                }
+              <Block $style={{ fontSize: "16px", color: "black", marginBottom: "0.5rem" }}>结果：</Block>
+              <Block $style={{ border:"1px solid black",width:"431px",height:"48px",fontSize: "16px" , backgroundColor: "white",borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center"}}>    
+                {selectedValue && typeof selectedValue === 'object' && selectedValue !== null && 'label' in selectedValue ? (selectedValue as { label: string }).label : "未选择"}
               </Block>
             </Block>
           </Block>
